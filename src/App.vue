@@ -5,7 +5,7 @@
       <h1>{{ message }}</h1>
     </div>
     <Introduce></Introduce>
-    <People></People>
+    <People v-if="false"></People>
     <Location></Location>
     <Footer></Footer>
   </div>
