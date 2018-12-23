@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Slide width="200">
+    <Slide width="160">
       <a href="#"><span>홈</span></a>
       <a href="#introduce"><span>소개</span></a>
       <a href="#location"><span>장소</span></a>
