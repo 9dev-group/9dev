@@ -7,6 +7,7 @@
     <Introduce></Introduce>
     <People v-show="false"></People>
     <Location></Location>
+    <Contact></Contact>
     <Footer></Footer>
   </div>
 </template>
@@ -15,6 +16,7 @@
 import Introduce from './components/Introduce.vue';
 import People from './components/People.vue';
 import Location from './components/Location.vue';
+import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
 
 export default {
@@ -29,6 +31,7 @@ export default {
     'Introduce': Introduce,
     'People': People,
     'Location': Location,
+    'Contact': Contact,
     'Footer': Footer
   }
 }
