@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <img src="./images/valuto.jpg">
+      <img v-bind:src="imgValuto"/>
       <h1>{{ message }}</h1>
     </div>
     <Introduce></Introduce>
@@ -21,7 +21,8 @@ export default {
   name: 'app',
   data () {
     return {
-      message: '9dev'
+      message: '9dev',
+      imgValuto: 'src/images/valuto.jpg'
     }
   },
   components: {
