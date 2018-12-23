@@ -1,14 +1,22 @@
 <template>
   <div id="app">
-    <div>
-      <img v-bind:src="imgValuto"/>
-      <h1>{{ message }}</h1>
-    </div>
-    <Introduce></Introduce>
-    <People v-show="false"></People>
-    <Location></Location>
-    <Contact></Contact>
-    <Footer></Footer>
+    <Slide width="200">
+      <a href="#"><span>홈</span></a>
+      <a href="#introduce"><span>소개</span></a>
+      <a href="#location"><span>장소</span></a>
+      <a href="#contact"><span>연락</span></a>
+    </Slide>
+    <main id="page-wrap">
+      <div>
+        <img v-bind:src="imgValuto"/>
+        <h1>{{ message }}</h1>
+      </div>
+      <Introduce id="introduce"></Introduce>
+      <People v-show="false"></People>
+      <Location id="location"></Location>
+      <Contact id="contact"></Contact>
+      <Footer></Footer>
+    </main>
   </div>
 </template>
 
@@ -18,6 +26,7 @@ import People from './components/People.vue';
 import Location from './components/Location.vue';
 import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
+import { Slide } from 'vue-burger-menu';
 
 export default {
   name: 'app',
@@ -28,17 +37,19 @@ export default {
     }
   },
   components: {
-    'Introduce': Introduce,
-    'People': People,
-    'Location': Location,
-    'Contact': Contact,
-    'Footer': Footer
+    Slide,
+    Introduce,
+    People,
+    Location,
+    Contact,
+    Footer
   }
 }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('./css/menu.css');
 
 #app {
   font-family: 'Noto Sans KR', 'Avenir', Helvetica, Arial, sans-serif;
