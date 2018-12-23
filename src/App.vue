@@ -12,7 +12,12 @@
         <h1>{{ message }}</h1>
       </div>
       <Introduce id="introduce"></Introduce>
-      <People v-show="false"></People>
+      <div>
+        <h2>사람들</h2>
+        <div v-for="(item, index) in profiles" v-bind:key="index">
+          <Profile v-bind:profile='item' />
+        </div>
+      </div>
       <Location id="location"></Location>
       <Contact id="contact"></Contact>
       <Footer></Footer>
@@ -21,28 +26,50 @@
 </template>
 
 <script>
+import { Slide } from 'vue-burger-menu';
 import Introduce from './components/Introduce.vue';
-import People from './components/People.vue';
 import Location from './components/Location.vue';
 import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
-import { Slide } from 'vue-burger-menu';
+import Profile from './components/Profile.vue';
+
+const profiles = [
+  {
+    "name": "무지",
+    "profession": "개발자",
+    "motto": "짱짱 멋있는 개발자입니다"
+  },
+  {
+    "name": "무지",
+    "profession": "개발자",
+    "motto": "짱짱 멋있는 개발자입니다"
+  },
+  {
+    "name": "무지",
+    "profession": "개발자",
+    "motto": "짱짱 멋있는 개발자입니다"
+  },
+];
 
 export default {
   name: 'app',
+  created: function() {
+    this.profiles = profiles;
+  },
   data () {
     return {
       message: '9dev',
-      imgValuto: 'src/images/valuto.jpg'
+      imgValuto: 'src/images/valuto.jpg',
+      profiles: []
     }
   },
   components: {
     Slide,
     Introduce,
-    People,
     Location,
     Contact,
-    Footer
+    Footer,
+    Profile
   }
 }
 </script>

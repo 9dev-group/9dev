@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>소개</h2>
-    <p v-for="message in messages">{{ message }}</p>
+    <p v-for="(message, index) in messages" v-bind:key="index">{{ message }}</p>
   </section>
 </template>
 
