@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <img src="./assets/valuto.jpg">
+      <img src="./images/valuto.jpg">
       <h1>{{ message }}</h1>
     </div>
     <Introduce></Introduce>
