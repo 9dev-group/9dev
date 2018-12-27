@@ -6,6 +6,7 @@
   left: 36px;
   top: 36px;
   cursor: pointer;
+  z-index: 999;
 }
 .bm-burger-bars {
   background-color: #373a47;

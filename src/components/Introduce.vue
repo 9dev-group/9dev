@@ -1,7 +1,24 @@
 <template>
   <section>
-    <h2>소개</h2>
-    <p v-for="(message, index) in messages" v-bind:key="index">{{ message }}</p>
+    <v-layout
+      column
+      wrap
+      class="my-5"
+      align-center
+    >
+      <v-flex xs12 sm4 class="my-3">
+        <div class="text-xs-center">
+          <h1 class="display-4">{{ title }}</h1>
+        </div>
+        <img v-bind:src="imgValuto"/>
+      </v-flex>
+      <v-flex xs12 sm4 class="my-3">
+        <div class="text-xs-center">
+          <h2 class="headline">소개</h2>
+          <p v-for="(message, index) in messages" v-bind:key="index">{{ message }}</p>
+        </div>
+      </v-flex>
+    </v-layout>
   </section>
 </template>
 
@@ -9,6 +26,8 @@
 export default {
   data() {
     return {
+      title: '9dev',
+      imgValuto: 'src/assets/images/valuto.jpg',
       messages: [
         '스터디의 공통 주제는 없습니다',
         '중요한 것은 개발자로서 성장하고 싶은 욕심인것 같습니다',

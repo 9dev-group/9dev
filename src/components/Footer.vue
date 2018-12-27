@@ -1,7 +1,13 @@
 <template>
-  <footer>
-    <p id="footer"> {{ message }} </p>
-  </footer>
+  <v-footer class="white">
+    <v-layout row wrap align-center>
+      <v-flex xs12>
+        <div class="black--text ml-3">
+          {{ message }}
+        </div>
+      </v-flex>
+    </v-layout>
+  </v-footer>
 </template>
 
 <script>

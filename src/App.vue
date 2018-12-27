@@ -3,48 +3,33 @@
     <Slide width="160">
       <a href="#"><span>홈</span></a>
       <a href="#introduce"><span>소개</span></a>
-      <a href="#introduce"><span>사람들</span></a>
-      <a href="#location"><span>장소</span></a>
-      <a href="#contact"><span>연락</span></a>
+      <a href="#profile"><span>사람들</span></a>
+      <a href="#information"><span>정보</span></a>
     </Slide>
-
-    <main id="page-wrap">
-      <div>
-        <img v-bind:src="imgValuto"/>
-        <h1>{{ message }}</h1>
-      </div>
+    <v-content id="page-wrap">
       <Introduce id="introduce"></Introduce>
       <Profile id="profile"></Profile>
-      <Location id="location"></Location>
-      <Contact id="contact"></Contact>
+      <Information id="information"></Information>
       <Footer id="footer"></Footer>
-    </main>
+    </v-content>
   </div>
 </template>
 
 <script>
 import { Slide } from 'vue-burger-menu';
 import Introduce from './components/Introduce.vue';
-import Location from './components/Location.vue';
-import Contact from './components/Contact.vue';
-import Footer from './components/Footer.vue';
 import Profile from './components/Profile.vue';
+import Information from './components/Information.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'app',
-  data () {
-    return {
-      message: '9dev',
-      imgValuto: 'src/images/valuto.jpg'
-    }
-  },
   components: {
     Slide,
     Introduce,
-    Location,
-    Contact,
-    Footer,
-    Profile
+    Profile,
+    Information,
+    Footer
   }
 }
 </script>
@@ -58,25 +43,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #1034A6;
 }
 </style>
