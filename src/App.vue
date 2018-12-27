@@ -3,24 +3,21 @@
     <Slide width="160">
       <a href="#"><span>홈</span></a>
       <a href="#introduce"><span>소개</span></a>
+      <a href="#introduce"><span>사람들</span></a>
       <a href="#location"><span>장소</span></a>
       <a href="#contact"><span>연락</span></a>
     </Slide>
+
     <main id="page-wrap">
       <div>
         <img v-bind:src="imgValuto"/>
         <h1>{{ message }}</h1>
       </div>
       <Introduce id="introduce"></Introduce>
-      <div>
-        <h2>사람들</h2>
-        <div v-for="(item, index) in profiles" v-bind:key="index">
-          <Profile v-bind:profile='item' />
-        </div>
-      </div>
+      <Profile id="profile"></Profile>
       <Location id="location"></Location>
       <Contact id="contact"></Contact>
-      <Footer></Footer>
+      <Footer id="footer"></Footer>
     </main>
   </div>
 </template>
@@ -33,34 +30,12 @@ import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
 import Profile from './components/Profile.vue';
 
-const profiles = [
-  {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
-  },
-  {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
-  },
-  {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
-  },
-];
-
 export default {
   name: 'app',
-  created: function() {
-    this.profiles = profiles;
-  },
   data () {
     return {
       message: '9dev',
-      imgValuto: 'src/images/valuto.jpg',
-      profiles: []
+      imgValuto: 'src/images/valuto.jpg'
     }
   },
   components: {

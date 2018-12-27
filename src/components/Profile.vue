@@ -1,28 +1,48 @@
 <template>
-  <div class="card-container">
-    <div class="card">
-      <div class="front">
-        <div class="cover"></div>
-        <div class="user">
-          <img src="src/images/default.png" width="100" height="100"/>
-        </div>
-        <div class="content">
-          <div class="main">
-            <h3 class="name">{{ profile.name }}</h3>
-            <p class="profession">{{ profile.profession }}</p>
-            <p class="text-center">{{ profile.motto }}</p>
-          </div>
-        </div>
+  <section>
+    <h2>사람들</h2>
+    <div class="row center">
+      <div class="col-3" v-for="(item, index) in profiles" v-bind:key="index">
+        <Card v-bind:profile='item' />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
+import Card from './Card.vue';
+
+const profiles = [
+  {
+    "name": "무지",
+    "profession": "개발자",
+    "motto": "짱짱 멋있는 개발자입니다"
+  },
+  {
+    "name": "무지",
+    "profession": "개발자",
+    "motto": "짱짱 멋있는 개발자입니다"
+  },
+  {
+    "name": "무지",
+    "profession": "개발자",
+    "motto": "짱짱 멋있는 개발자입니다"
+  },
+];
+
 export default {
-  name: 'Profile',
-  props: ['profile'],
-};
+  created: function() {
+    this.profiles = profiles;
+  },
+  data () {
+    return {
+      profiles: []
+    }
+  },
+  components: {
+    Card
+  }
+}
 </script>
 
 <style scoped>
