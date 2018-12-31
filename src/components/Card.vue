@@ -3,7 +3,7 @@
     <v-card-title primary-title class="layout justify-center">
       <div class="headline text-xs-center font-weight-bold">{{ profile.name }}</div>
     </v-card-title>
-    <a class="profile-image" v-bind:href="profile.link">
+    <a class="profile-image" v-bind:href="profile.link" target="_blank">
       <v-avatar size="120">
         <img v-bind:src="profile.image">
       </v-avatar>
