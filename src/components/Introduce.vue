@@ -4,14 +4,7 @@
       column
       wrap
       class="my-5"
-      align-center
     >
-      <v-flex xs12 sm4 class="my-3">
-        <div class="text-xs-center">
-          <h1 class="display-4">{{ title }}</h1>
-        </div>
-        <img v-bind:src="image"/>
-      </v-flex>
       <v-flex xs12 sm4 class="my-3">
         <div class="text-xs-center">
           <h2 class="headline">소개</h2>
@@ -26,8 +19,6 @@
 export default {
   data() {
     return {
-      title: '9dev',
-      image: 'https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/valuto.jpg',
       messages: [
         '스터디의 공통 주제는 없습니다',
         '중요한 것은 개발자로서 성장하고 싶은 욕심인것 같습니다',
