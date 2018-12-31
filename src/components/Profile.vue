@@ -35,19 +35,19 @@ const profiles = [
     "name": "햇반a",
     "profession": "웹 개발자",
     "motto": "오늘도 취한드..",
-    "image": prodProfileImgPath + "hat.jpg",
+    "image": prodProfileImgPath + "hat.jpg"
   },
   {
     "name": "여니",
     "profession": "솔루션 개발자",
     "motto": "딸기좋아❤️",
-    "image": prodProfileImgPath + "strawberry.jpg",
+    "image": prodProfileImgPath + "strawberry.jpg"
   },
   {
     "name": "우저이",
     "profession": "웹 개발자",
     "motto": "오늘도 행복하게 :D",
-    "image": prodProfileImgPath + "woo.jpg",
+    "image": prodProfileImgPath + "woo.jpg"
   },
   {
     "name": "강뚱",
@@ -57,10 +57,10 @@ const profiles = [
     "link": "https://github.com/greatfarmer"
   },
   {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
+    "name": "Jaeyeonling",
+    "profession": "서버 개발자",
+    "motto": "한량 개발자가 되고 싶어요",
+    "image": prodProfileImgPath + "jaeyeonling.png"
   },
   {
     "name": "무지",
