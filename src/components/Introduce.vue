@@ -8,6 +8,7 @@
       <v-flex xs12 sm4 class="my-3">
         <div class="text-xs-center">
           <h2 class="headline">소개</h2>
+          <br>
           <p v-for="(message, index) in messages" v-bind:key="index">{{ message }}</p>
         </div>
       </v-flex>

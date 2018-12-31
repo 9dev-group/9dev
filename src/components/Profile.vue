@@ -35,19 +35,19 @@ const profiles = [
     "name": "햇반a",
     "profession": "웹 개발자",
     "motto": "오늘도 취한드..",
-    "image": prodProfileImgPath + "hat.jpg",
+    "image": prodProfileImgPath + "hat.jpg"
   },
   {
     "name": "여니",
     "profession": "솔루션 개발자",
     "motto": "딸기좋아❤️",
-    "image": prodProfileImgPath + "strawberry.jpg",
+    "image": prodProfileImgPath + "strawberry.jpg"
   },
   {
     "name": "우저이",
     "profession": "웹 개발자",
     "motto": "오늘도 행복하게 :D",
-    "image": prodProfileImgPath + "woo.jpg",
+    "image": prodProfileImgPath + "woo.jpg"
   },
   {
     "name": "강뚱",
