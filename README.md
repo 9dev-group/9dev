@@ -1,6 +1,6 @@
 # 9dev
 
-> [A 9dev webpage](https://greatfarmer.github.io/9dev/)
+> A 9dev webpage
 
 ## Build Setup
 
