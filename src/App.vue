@@ -7,6 +7,7 @@
       <a href="#information"><span>정보</span></a>
     </Slide>
     <v-content id="page-wrap">
+      <Front id="front"></Front>
       <Introduce id="introduce"></Introduce>
       <Profile id="profile"></Profile>
       <Information id="information"></Information>
@@ -17,6 +18,7 @@
 
 <script>
 import { Slide } from 'vue-burger-menu';
+import Front from './components/Front.vue';
 import Introduce from './components/Introduce.vue';
 import Profile from './components/Profile.vue';
 import Information from './components/Information.vue';
@@ -26,6 +28,7 @@ export default {
   name: 'app',
   components: {
     Slide,
+    Front,
     Introduce,
     Profile,
     Information,

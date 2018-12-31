@@ -1,13 +1,15 @@
 <template>
   <v-card class="elevation-0 transparent">
-    <v-card-text class="text-xs-center">
-      <img v-bind:src="profile.image" width="100" height="100"/>
-    </v-card-text>
     <v-card-title primary-title class="layout justify-center">
-      <div class="headline text-xs-center">{{ profile.name }}</div>
+      <div class="headline text-xs-center font-weight-bold">{{ profile.name }}</div>
     </v-card-title>
+    <a class="profile-image" v-bind:href="profile.link">
+      <v-avatar size="120">
+        <img v-bind:src="profile.image">
+      </v-avatar>
+    </a>
     <v-card-text>
-      {{ profile.profession }}
+      <span class="subheading font-weight-bold">{{ profile.profession }}</span>
       <br>
       {{ profile.motto }}
     </v-card-text>
