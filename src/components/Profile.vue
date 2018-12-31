@@ -57,10 +57,11 @@ const profiles = [
     "link": "https://github.com/greatfarmer"
   },
   {
-    "name": "Jaeyeonling",
+    "name": "재연링",
     "profession": "서버 개발자",
     "motto": "한량 개발자가 되고 싶어요",
-    "image": prodProfileImgPath + "jaeyeonling.png"
+    "image": prodProfileImgPath + "jaeyeonling.jpg",
+    "link": "https://github.com/jaeyeonling"
   },
   {
     "name": "무지",
