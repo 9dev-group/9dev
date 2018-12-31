@@ -31,62 +31,74 @@ const profiles = [
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
   {
     "name": "무지",
     "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다"
+    "motto": "짱짱 멋있는 개발자입니다",
+    "image": "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/default.png"
   },
 ];
 
