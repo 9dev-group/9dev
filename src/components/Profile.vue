@@ -64,10 +64,11 @@ const profiles = [
     "link": "https://github.com/jaeyeonling"
   },
   {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
+    "name": "미노",
+    "profession": "프론트 개발자",
+    "motto": "네 그냥 상직적인거됴",
+    "image": devProfileImgPath + "minho.jpg",
+    "link": "https://github.com/minhoyooDEV"
   },
   {
     "name": "무지",
