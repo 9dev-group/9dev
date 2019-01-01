@@ -67,14 +67,15 @@ const profiles = [
     "name": "미노",
     "profession": "프론트 개발자",
     "motto": "네 그냥 상직적인거됴",
-    "image": devProfileImgPath + "minho.jpg",
+    "image": prodProfileImgPath + "minho.jpg",
     "link": "https://github.com/minhoyooDEV"
   },
   {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
+    "name": "BEAN",
+    "profession": "안드로이드 개발자",
+    "motto": "파이팅~~",
+    "image": prodProfileImgPath + "bean.jpg",
+    "link": "https://github.com/sbean0215"
   },
   {
     "name": "무지",
