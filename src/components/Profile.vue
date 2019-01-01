@@ -102,10 +102,10 @@ const profiles = [
     "image": prodProfileImgPath + "default.png"
   },
   {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
+    "name": "JY",
+    "profession": "군인",
+    "motto": "짱짱 멋있는 육군입니다",
+    "image": prodProfileImgPath + "army.jpg"
   },
 ];
 
