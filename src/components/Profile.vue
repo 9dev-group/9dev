@@ -78,28 +78,10 @@ const profiles = [
     "link": "https://github.com/sbean0215"
   },
   {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
-  },
-  {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
-  },
-  {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
-  },
-  {
-    "name": "무지",
-    "profession": "개발자",
-    "motto": "짱짱 멋있는 개발자입니다",
-    "image": prodProfileImgPath + "default.png"
+    "name": "깡쏘",
+    "profession": "웹 개발자",
+    "motto": "blühen",
+    "image": prodProfileImgPath + "kangsso.jpg"
   },
   {
     "name": "JY",
