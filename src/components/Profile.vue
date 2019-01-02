@@ -27,6 +27,8 @@
 <script>
 import Card from './Card.vue';
 
+var _ = require('lodash');
+
 const prodProfileImgPath = "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/profiles/";
 const devProfileImgPath = "src/assets/images/profiles/";
 
@@ -93,11 +95,11 @@ const profiles = [
 
 export default {
   created: function() {
-    this.profiles = profiles;
+    this.profiles = _.shuffle(this.profiles);
   },
   data () {
     return {
-      profiles: []
+      profiles
     }
   },
   components: {
