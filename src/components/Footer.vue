@@ -2,7 +2,7 @@
   <v-footer class="white">
     <v-layout row wrap align-center>
       <v-flex xs12>
-        <div class="black--text ml-3">
+        <div class="black--text">
           {{ message }}
         </div>
       </v-flex>
@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      message: '©2018 9dev'
+      message: '©2019 9dev'
     }
   }
 }
