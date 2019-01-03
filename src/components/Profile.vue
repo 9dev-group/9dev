@@ -86,6 +86,12 @@ const profiles = [
     "image": prodProfileImgPath + "kangsso.jpg"
   },
   {
+    "name": "Hooni",
+    "profession": "웹 개발자",
+    "motto": "행복을 찾아서...",
+    "image": prodProfileImgPath + "hooni.jpg"
+  },
+  {
     "name": "JY",
     "profession": "군인",
     "motto": "짱짱 멋있는 육군입니다",
