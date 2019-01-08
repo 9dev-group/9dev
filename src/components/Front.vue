@@ -20,7 +20,7 @@ const devLogoImgPath = "src/assets/images/logo/";
 export default {
   data() {
     return {
-      image: devLogoImgPath + 'Logo_01.png'
+      image: prodLogoImgPath + 'Logo_01.png'
     }
   }
 }
