@@ -14,7 +14,7 @@
 </template>
 
 <script>
-const prodLogoImgPath = "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/logo/";
+const prodLogoImgPath = "https://raw.githubusercontent.com/9dev-group/9dev/master/src/assets/images/logo/";
 const devLogoImgPath = "src/assets/images/logo/";
 
 export default {
