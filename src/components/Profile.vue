@@ -29,7 +29,7 @@ import Card from './Card.vue';
 
 var _ = require('lodash');
 
-const prodProfileImgPath = "https://raw.githubusercontent.com/greatfarmer/9dev/master/src/assets/images/profiles/";
+const prodProfileImgPath = "https://raw.githubusercontent.com/9dev-group/9dev/master/src/assets/images/profiles/";
 const devProfileImgPath = "src/assets/images/profiles/";
 
 const profiles = [
