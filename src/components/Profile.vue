@@ -97,6 +97,12 @@ const profiles = [
     "motto": "짱짱 멋있는 육군입니다",
     "image": prodProfileImgPath + "army.jpg"
   },
+  {
+    "name": "hongmo",
+    "profession": "웹 개발자",
+    "motto": "si 노예",
+    "image": prodProfileImgPath + "hongmo.jpg"
+  },
 ];
 
 export default {
