@@ -1,39 +1,33 @@
 <template>
   <div id="app">
-    <Slide width="160">
-      <a href="#"><span>홈</span></a>
-      <a href="#introduce"><span>소개</span></a>
-      <a href="#profile"><span>사람들</span></a>
-      <a href="#information"><span>정보</span></a>
-    </Slide>
-    <v-content id="page-wrap">
-      <Front id="front"></Front>
-      <Introduce id="introduce"></Introduce>
-      <Profile id="profile"></Profile>
-      <Information id="information"></Information>
-      <Footer id="footer"></Footer>
-    </v-content>
+    <v-app>
+      <v-toolbar fixed>
+        <v-toolbar-title>9dev</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items>
+          <v-btn flat>
+            <router-link to="/">홈</router-link>
+          </v-btn>
+          <v-btn flat>
+            <router-link to="/editor">글쓰기</router-link>
+          </v-btn>
+          <v-btn flat>
+            <router-link to="/board">글목록</router-link>
+          </v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+      <v-content id="content">
+        <v-container fluid>
+          <router-view></router-view>
+        </v-container>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu';
-import Front from './components/Front.vue';
-import Introduce from './components/Introduce.vue';
-import Profile from './components/Profile.vue';
-import Information from './components/Information.vue';
-import Footer from './components/Footer.vue';
-
 export default {
-  name: 'app',
-  components: {
-    Slide,
-    Front,
-    Introduce,
-    Profile,
-    Information,
-    Footer
-  }
+  name: 'app'
 }
 </script>
 
@@ -45,7 +39,9 @@ export default {
   font-family: 'Noto Sans KR', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+}
+
+#content {
   margin-top: 60px;
 }
 </style>
