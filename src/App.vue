@@ -2,17 +2,13 @@
   <div id="app">
     <v-app>
       <v-toolbar fixed>
-        <v-toolbar-title>9dev</v-toolbar-title>
+        <v-toolbar-title>
+          <router-link to="/">9dev</router-link>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items>
           <v-btn flat>
-            <router-link to="/">홈</router-link>
-          </v-btn>
-          <v-btn flat>
-            <router-link to="/editor">글쓰기</router-link>
-          </v-btn>
-          <v-btn flat>
-            <router-link to="/board">글목록</router-link>
+            <router-link to="/posts">포스트</router-link>
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
@@ -43,5 +39,25 @@ export default {
 
 #content {
   margin-top: 60px;
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
