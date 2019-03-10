@@ -10,13 +10,25 @@
         grid-list-lg
       >
         <v-layout row wrap>
-          <v-flex xs12 v-for="(item, index) in posts" v-bind:key="index">
-            <Post v-bind:post='item' />
+          <v-flex xs12 v-for="(post, index) in posts" v-bind:key="index">
+            <v-card color="blue-grey darken-2" class="white--text">
+              <v-card-title primary-title>
+                <div>
+                  <div class="headline">{{ post.title }}</div>
+                  <span>{{ post.writer }}</span>
+                </div>
+              </v-card-title>
+              <v-card-actions>
+                <router-link :to="{ name: 'post', params: { id: post['.key'], post: post } }">
+                  <v-btn dark color="indigo">보기</v-btn>
+                </router-link>
+              </v-card-actions>
+            </v-card>
           </v-flex>
         </v-layout>
       </v-container>
     </v-card>
-    <router-link to="/editor">
+    <router-link to="/posts/new">
       <v-btn
         fixed
         dark
@@ -32,23 +44,15 @@
 </template>
 
 <script>
-import 'tui-editor/dist/tui-editor-contents.css';
-import 'highlight.js/styles/github.css';
-import { Viewer } from '@toast-ui/vue-editor'
 import { db } from '../config/db';
-import Post from './Post.vue';
 
-let postsRef = db.ref('posts')
+const postsRef = db.ref('posts');
 
 export default {
-  components: {
-      'viewer': Viewer,
-      Post
-  },
   firebase: function() { // Vuefire 라이브러리로 Vue.js속성 바인딩
-      return {
-          posts: postsRef
-      }
+    return {
+        posts: postsRef
+    }
   }
 };
 </script>

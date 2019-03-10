@@ -8,7 +8,7 @@
         <v-spacer></v-spacer>
         <v-toolbar-items>
           <v-btn flat>
-            <router-link to="/posts">포스트</router-link>
+            <router-link to="/posts">글</router-link>
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'app'
-}
+};
 </script>
 
 <style>

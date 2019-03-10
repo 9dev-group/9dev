@@ -23,5 +23,5 @@ export default {
       mail: 'minho.yoo.dev@gmail.com'
     }
   }
-}
+};
 </script>
