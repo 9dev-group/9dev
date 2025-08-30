@@ -53,14 +53,15 @@
                 :class="`info-${index + 1}`"
               >
                 <v-card-text class="text-center pa-8">
-                  <div class="info-icon-container">
-                    <v-avatar 
-                      size="80" 
-                      :color="info.color"
-                      class="info-avatar elevation-4"
-                    >
-                      <v-icon :icon="info.icon" color="white" size="40" />
-                    </v-avatar>
+                  <div class="info-image-container d-flex justify-center">
+                    <v-img
+                      :src="info.image"
+                      :alt="info.title"
+                      width="200"
+                      height="150"
+                      cover
+                      class="info-image rounded-lg elevation-4"
+                    />
                   </div>
                   <h3 class="info-title">{{ info.title }}</h3>
                   <p class="info-description">{{ info.description }}</p>
@@ -94,22 +95,22 @@ import Contact from './Contact.vue'
 
 const additionalInfo = [
   {
-    icon: 'mdi-calendar-multiple',
+    image: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=400&h=300&fit=crop',
     title: '모임 일정',
-    description: '매주 토요일 오후 2시부터 6시까지 정기적인 스터디 모임을 진행합니다.',
+    description: '매주 토·일요일 중 편한 시간에 정기적인 스터디 모임을 진행합니다.',
     color: 'primary',
-    actionIcon: 'mdi-calendar-plus',
+    actionIcon: 'mdi-calendar-check',
     actionText: '일정 확인',
     action: () => {
       window.open('https://calendar.google.com', '_blank')
     }
   },
   {
-    icon: 'mdi-coffee',
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop',
     title: '모임 방식',
     description: '강남역 근처 카페에서 편안하고 자유로운 분위기로 스터디를 진행합니다.',
     color: 'success',
-    actionIcon: 'mdi-map-marker',
+    actionIcon: 'mdi-map-marker-radius',
     actionText: '위치 보기',
     action: () => {
       const element = document.querySelector('.location-card')
@@ -119,14 +120,14 @@ const additionalInfo = [
     }
   },
   {
-    icon: 'mdi-account-plus',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop',
     title: '신규 멤버',
     description: '개발에 관심 있는 분들은 언제든 환영합니다. 부담없이 연락주세요!',
     color: 'info',
-    actionIcon: 'mdi-email',
+    actionIcon: 'mdi-email-outline',
     actionText: '연락하기',
     action: () => {
-      window.open('mailto:minho.yoo.dev@gmail.com', '_blank')
+      window.open('mailto:9dev.study@gmail.com', '_blank')
     }
   }
 ]

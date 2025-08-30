@@ -133,7 +133,6 @@ import Profile from './components/Profile.vue'
 import Information from './components/Information.vue'
 import Footer from './components/Footer.vue'
 
-
 const theme = useTheme()
 
 const drawer = ref(false)

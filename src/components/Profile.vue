@@ -140,7 +140,7 @@ const profiles = [
   },
   {
     name: "강뚱",
-    profession: "웹 개발자",
+    profession: "서버 개발자",
     motto: "뚱이를 좋아합니다",
     image: prodProfileImgPath + "patrick.jpg",
     link: "https://github.com/greatfarmer"

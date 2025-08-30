@@ -8,7 +8,7 @@
         </v-avatar>
         <div class="header-text">
           <h3 class="card-title">모임 장소</h3>
-          <p class="card-subtitle">매주 토요일 오후 2시</p>
+          <p class="card-subtitle">매주 토·일요일 중 편한 시간에</p>
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="map-container">
       <iframe 
         id="googleMap" 
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12666.555472892378!2d126.9322982!3d37.4692477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9fe7b06520f5%3A0x416113ca566fa354!2z67Cc66Oo7Yag!5e0!3m2!1sko!2skr!4v1545546403982" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6698.203586195973!2d126.96890556411533!3d37.47494020686279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca037ef2cc5df%3A0x78c5a26b1c43607f!2sCAFE%20BONITO!5e0!3m2!1sko!2skr!4v1756537055712!5m2!1sko!2skr" 
         frameborder="0" 
         allowfullscreen
         class="map-iframe"
@@ -27,7 +27,7 @@
       <div class="map-overlay">
         <v-chip color="primary" variant="elevated" size="small">
           <v-icon start icon="mdi-map-marker" />
-          강남역 근처
+          사당역 근처
         </v-chip>
       </div>
     </div>
@@ -35,14 +35,14 @@
     <!-- Location Details -->
     <v-card-text class="location-details pa-6">
       <div class="location-info">
-        <h4 class="location-name">강남역 카페</h4>
+        <h4 class="location-name">사당역 카페</h4>
         
         <div class="detail-list">
           <div class="detail-item">
             <v-icon icon="mdi-map-marker" color="primary" size="20" />
             <div class="detail-content">
               <span class="detail-label">주소</span>
-              <span class="detail-value">서울 강남구 강남대로 123</span>
+              <span class="detail-value">서울 관악구 남부순환로 2032 1층 카페보니또</span>
             </div>
           </div>
           
@@ -50,7 +50,7 @@
             <v-icon icon="mdi-subway" color="success" size="20" />
             <div class="detail-content">
               <span class="detail-label">교통</span>
-              <span class="detail-value">강남역 2번 출구 도보 5분</span>
+              <span class="detail-value">사당역 6번 출구 도보 8분</span>
             </div>
           </div>
           
@@ -58,7 +58,7 @@
             <v-icon icon="mdi-clock" color="info" size="20" />
             <div class="detail-content">
               <span class="detail-label">시간</span>
-              <span class="detail-value">매주 토요일 14:00 - 18:00</span>
+              <span class="detail-value">매주 토·일요일 중 편한 시간에</span>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ import { ref } from 'vue'
 
 const copyAddress = async () => {
   try {
-    await navigator.clipboard.writeText('서울 강남구 강남대로 123')
+    await navigator.clipboard.writeText('서울 관악구 남부순환로 2032 1층 카페보니또')
     // You could add a toast notification here
   } catch (err) {
     console.error('주소 복사 실패:', err)

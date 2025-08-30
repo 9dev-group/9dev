@@ -107,20 +107,6 @@
           </p>
         </v-col>
       </v-row>
-      
-      <!-- Back to Top -->
-      <div class="back-to-top">
-        <v-btn
-          icon
-          color="accent"
-          variant="elevated"
-          size="large"
-          @click="scrollToTop"
-          class="top-btn"
-        >
-          <v-icon icon="mdi-arrow-up" />
-        </v-btn>
-      </div>
     </v-container>
   </v-footer>
 </template>
@@ -147,7 +133,7 @@ const socialLinks = [
   {
     name: 'Email',
     icon: 'mdi-email',
-    link: 'mailto:minho.yoo.dev@gmail.com',
+    link: 'mailto:9dev.study@gmail.com',
     color: 'white'
   }
 ]
@@ -157,21 +143,21 @@ const contactInfo = [
     type: 'email',
     icon: 'mdi-email',
     label: '이메일',
-    value: 'minho.yoo.dev@gmail.com',
+    value: '9dev.study@gmail.com',
     color: 'accent'
   },
   {
     type: 'schedule',
     icon: 'mdi-calendar',
     label: '일정',
-    value: '매주 토요일 오후 2시',
+    value: '매주 토·일요일 중 편한 시간에',
     color: 'success'
   },
   {
     type: 'location',
     icon: 'mdi-map-marker',
     label: '장소',
-    value: '강남역 카페',
+    value: '사당역 카페',
     color: 'info'
   }
 ]

@@ -43,7 +43,6 @@
           elevation="2"
         >
           <div class="d-flex align-center">
-            <v-icon class="mr-3">mdi-information</v-icon>
             <div>
               <strong>참여 방법</strong>
               <p class="mb-0 mt-1">개발에 관심이 있으시다면 언제든 연락주세요. 
@@ -61,8 +60,8 @@ const contactMethods = [
   {
     icon: 'mdi-email',
     title: '이메일',
-    value: 'minho.yoo.dev@gmail.com',
-    link: 'mailto:minho.yoo.dev@gmail.com',
+    value: '9dev.study@gmail.com',
+    link: 'mailto:9dev.study@gmail.com',
     actionIcon: 'mdi-email-send',
     actionText: '메일 보내기',
     color: 'primary'
@@ -79,7 +78,7 @@ const contactMethods = [
   {
     icon: 'mdi-calendar-clock',
     title: '모임 시간',
-    value: '매주 토요일 오후 2시 - 6시',
+    value: '매주 토·일요일 중 편한 시간에',
     link: null,
     actionIcon: null,
     actionText: null,
