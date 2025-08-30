@@ -69,7 +69,7 @@
             color="primary"
             size="large"
             class="direction-btn"
-            href="https://maps.google.com/?q=강남역"
+            href="https://maps.google.com/?q=카페보니또"
             target="_blank"
             rel="noopener noreferrer"
           >
