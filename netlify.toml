@@ -1,7 +1,14 @@
 [build]
-  command = "npm run build && mkdir build && cp index.html build && cp -r dist build/dist"
-  publish = "build"
+  command = "npm ci && npm run build"
+  publish = "dist"
 
+# 정적 자산은 그대로 서빙되도록 먼저 명시(안전장치)
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+# SPA 라우팅 (뷰 라우터용)
 [[redirects]]
   from = "/*"
   to = "/index.html"
