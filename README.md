@@ -158,7 +158,7 @@ npm run preview
 이 프로젝트는 Netlify를 통해 자동 배포됩니다.
 
 - **프로덕션 URL**: [9dev.netlify.app](https://9dev.netlify.app)
-- **브랜치**: `main` 브랜치에 푸시하면 자동 배포
+- **브랜치**: `master` 브랜치에 푸시하면 자동 배포
 
 ---
 
