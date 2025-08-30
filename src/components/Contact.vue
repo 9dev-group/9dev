@@ -56,40 +56,36 @@
   </v-card>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      mail: 'minho.yoo.dev@gmail.com',
-      contactMethods: [
-        {
-          icon: 'mdi-email',
-          title: '이메일',
-          value: 'minho.yoo.dev@gmail.com',
-          link: 'mailto:minho.yoo.dev@gmail.com',
-          actionIcon: 'mdi-email-send',
-          actionText: '메일 보내기'
-        },
-        {
-          icon: 'mdi-github',
-          title: 'GitHub',
-          value: 'github.com/9dev-group',
-          link: 'https://github.com/9dev-group',
-          actionIcon: 'mdi-open-in-new',
-          actionText: '방문하기'
-        },
-        {
-          icon: 'mdi-calendar',
-          title: '모임 일정',
-          value: '매주 토요일 오후 2시',
-          link: null,
-          actionIcon: null,
-          actionText: null
-        }
-      ]
-    }
+<script setup>
+const contactMethods = [
+  {
+    icon: 'mdi-email',
+    title: '이메일',
+    value: 'minho.yoo.dev@gmail.com',
+    link: 'mailto:minho.yoo.dev@gmail.com',
+    actionIcon: 'mdi-email-send',
+    actionText: '메일 보내기',
+    color: 'primary'
+  },
+  {
+    icon: 'mdi-github',
+    title: 'GitHub',
+    value: 'github.com/9dev-group',
+    link: 'https://github.com/9dev-group',
+    actionIcon: 'mdi-open-in-new',
+    actionText: '방문하기',
+    color: 'info'
+  },
+  {
+    icon: 'mdi-calendar-clock',
+    title: '모임 시간',
+    value: '매주 토요일 오후 2시 - 6시',
+    link: null,
+    actionIcon: null,
+    actionText: null,
+    color: 'success'
   }
-}
+]
 </script>
 
 <style scoped>
