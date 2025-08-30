@@ -1,5 +1,6 @@
 <template>
   <v-card 
+    ref="cardRef"
     class="profile-card modern-card" 
     elevation="0"
     @mouseenter="onCardHover"
@@ -107,29 +108,44 @@ const handleImageError = (event) => {
   event.target.src = 'https://via.placeholder.com/120x120/667eea/ffffff?text=' + encodeURIComponent('👤')
 }
 
-const onImageLoad = () => {
-  gsap.fromTo(event.target, 
-    { scale: 0, rotation: 180 },
-    { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.7)" }
-  )
+const onImageLoad = (event) => {
+  // 모바일에서는 애니메이션 비활성화
+  if (window.innerWidth <= 768) return
+  
+  if (event.target) {
+    gsap.fromTo(event.target, 
+      { scale: 0, rotation: 180 },
+      { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.7)" }
+    )
+  }
 }
 
 const onCardHover = () => {
-  gsap.to(cardRef.value, {
-    y: -12,
-    rotateY: 5,
-    duration: 0.4,
-    ease: "power2.out"
-  })
+  // 모바일에서는 애니메이션 비활성화
+  if (window.innerWidth <= 768) return
+  
+  if (cardRef.value) {
+    gsap.to(cardRef.value, {
+      y: -12,
+      rotateY: 5,
+      duration: 0.4,
+      ease: "power2.out"
+    })
+  }
 }
 
 const onCardLeave = () => {
-  gsap.to(cardRef.value, {
-    y: 0,
-    rotateY: 0,
-    duration: 0.4,
-    ease: "power2.out"
-  })
+  // 모바일에서는 애니메이션 비활성화
+  if (window.innerWidth <= 768) return
+  
+  if (cardRef.value) {
+    gsap.to(cardRef.value, {
+      y: 0,
+      rotateY: 0,
+      duration: 0.4,
+      ease: "power2.out"
+    })
+  }
 }
 
 const getProfessionColor = (profession) => {
