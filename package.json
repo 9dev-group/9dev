@@ -21,7 +21,8 @@
     "pinia": "^2.1.7",
     "gsap": "^3.12.5",
     "intersection-observer": "^0.12.2",
-    "@vueuse/core": "^10.9.0"
+    "@vueuse/core": "^10.9.0",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",
