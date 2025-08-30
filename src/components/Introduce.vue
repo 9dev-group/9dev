@@ -176,10 +176,10 @@ const features = [
     description: '프론트엔드부터 백엔드, 모바일까지 다양한 기술 스택을 함께 탐구합니다.'
   },
   {
-    icon: 'mdi-account-supervisor',
-    iconColor: 'success',
-    title: '멘토링',
-    description: '시니어와 주니어가 함께하는 멘토링 시스템으로 효과적인 학습을 도와줍니다.'
+    icon: 'mdi-lightbulb-on',
+    iconColor: 'warning',
+    title: '아이디어 공유',
+    description: '개발 아이디어와 프로젝트를 자유롭게 공유하며 서로에게 영감을 주고받습니다.'
   },
   {
     icon: 'mdi-calendar-check',
