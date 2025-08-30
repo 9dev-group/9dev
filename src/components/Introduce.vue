@@ -114,16 +114,6 @@
               <div class="cta-actions">
                 <v-btn
                   size="large"
-                  color="primary"
-                  variant="elevated"
-                  class="mr-4"
-                  @click="scrollToSection('profile')"
-                >
-                  <v-icon start icon="mdi-account-plus" />
-                  멤버 되기
-                </v-btn>
-                <v-btn
-                  size="large"
                   variant="outlined"
                   color="primary"
                   @click="scrollToSection('information')"
