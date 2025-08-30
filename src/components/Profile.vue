@@ -237,60 +237,71 @@ const scrollToSection = (sectionId) => {
 }
 
 onMounted(() => {
-  // Section reveal animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed')
-        
-        // Animate profile cards
-        gsap.fromTo('.profile-wrapper',
-          { opacity: 0, y: 50, scale: 0.8, rotateY: -15 },
-          { 
-            opacity: 1, 
-            y: 0, 
-            scale: 1, 
-            rotateY: 0,
-            duration: 0.8, 
-            stagger: 0.1, 
-            ease: "power2.out" 
-          }
-        )
-        
-        // Animate stats with counter effect
-        gsap.fromTo('.stat-item',
-          { opacity: 0, y: 30, scale: 0.9 },
-          { 
-            opacity: 1, 
-            y: 0, 
-            scale: 1, 
-            duration: 0.8, 
-            stagger: 0.2, 
-            ease: "back.out(1.7)",
-            delay: 0.5
-          }
-        )
-        
-        // Number counting animation
-        stats.forEach((stat, index) => {
-          if (typeof stat.number === 'number') {
-            gsap.fromTo(`.stat-${index + 1} .stat-number`, 
-              { textContent: 0 },
-              { 
-                textContent: stat.number,
-                duration: 2,
-                delay: 1 + index * 0.2,
-                ease: "power2.out",
-                snap: { textContent: 1 }
-              }
-            )
-          }
-        })
-      }
-    })
-  }, { threshold: 0.2 })
+  // Check if mobile device
+  const isMobile = window.innerWidth <= 768
   
-  observer.observe(document.getElementById('profile'))
+  if (isMobile) {
+    // Mobile: No animations, just show content immediately
+    const profileSection = document.getElementById('profile')
+    if (profileSection) {
+      profileSection.classList.add('revealed')
+    }
+  } else {
+    // Desktop: Full animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed')
+          
+          // Desktop animations
+          gsap.fromTo('.profile-wrapper',
+            { opacity: 0, y: 50, scale: 0.8, rotateY: -15 },
+            { 
+              opacity: 1, 
+              y: 0, 
+              scale: 1, 
+              rotateY: 0,
+              duration: 0.8, 
+              stagger: 0.1, 
+              ease: "power2.out" 
+            }
+          )
+          
+          // Animate stats with counter effect
+          gsap.fromTo('.stat-item',
+            { opacity: 0, y: 30, scale: 0.9 },
+            { 
+              opacity: 1, 
+              y: 0, 
+              scale: 1, 
+              duration: 0.8, 
+              stagger: 0.2, 
+              ease: "back.out(1.7)",
+              delay: 0.5
+            }
+          )
+          
+          // Number counting animation
+          stats.forEach((stat, index) => {
+            if (typeof stat.number === 'number') {
+              gsap.fromTo(`.stat-${index + 1} .stat-number`, 
+                { textContent: 0 },
+                { 
+                  textContent: stat.number,
+                  duration: 2,
+                  delay: 1 + index * 0.2,
+                  ease: "power2.out",
+                  snap: { textContent: 1 }
+                }
+              )
+            }
+          })
+        }
+      })
+    }, { threshold: 0.2 })
+    
+    observer.observe(document.getElementById('profile'))
+  }
 })
 </script>
 
@@ -301,6 +312,7 @@ onMounted(() => {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .section-background {
@@ -321,6 +333,7 @@ onMounted(() => {
 .section-container {
   position: relative;
   z-index: 2;
+  padding: 2rem 0;
 }
 
 .section-header {
@@ -362,6 +375,15 @@ onMounted(() => {
     opacity: 0;
     transform: translateY(50px) scale(0.8) rotateY(-15deg);
     animation: profileReveal 0.8s ease forwards var(--animation-delay);
+  }
+  
+  /* Mobile: No animations */
+  @media (max-width: 768px) {
+    .profile-wrapper {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
   }
 }
 
@@ -486,19 +508,57 @@ onMounted(() => {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .profile-section {
+    min-height: auto !important;
+    padding: 2rem 0;
+  }
+  
+  .section-container {
+    padding: 1rem 0;
+  }
+  
   .profiles-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .profile-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    width: 100% !important;
+  }
+  
+  .stats-card {
+    margin: 0 1rem;
+  }
+  
+  .stats-card .stat-item {
+    opacity: 1 !important;
+    transform: none !important;
   }
   
   .stats-card .stat-item .stat-content .stat-number {
     font-size: 2rem;
   }
+  
+  .section-header .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-header .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .join-cta {
+    margin: 0 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .profiles-container {
-    grid-template-columns: 1fr;
     gap: 1rem;
   }
   
@@ -508,6 +568,22 @@ onMounted(() => {
   
   .stats-card .stat-item .stat-content .stat-number {
     font-size: 1.8rem;
+  }
+  
+  .section-header .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-header .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .join-cta .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .join-cta .cta-description {
+    font-size: 1rem;
   }
 }
 </style>
