@@ -1,26 +1,52 @@
 <template>
-  <section>
-    <v-layout
-      column
-      wrap
-      class="my-5"
-      align-center
-    >
-      <v-flex xs12 sm4 class="my-3">
-        <div class="text-xs-center">
-          <h2 class="headline">사람들</h2>
-        </div>
-      </v-flex>
-      <v-flex xs12>
-        <v-container grid-list-xl>
-          <v-layout row wrap align-center>
-            <v-flex xs12 md4 v-for="(item, index) in profiles" v-bind:key="index">
-              <Card v-bind:profile='item' />
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-flex>
-    </v-layout>
+  <section class="profile-section">
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" class="text-center">
+          <div class="section-header">
+            <h2 class="section-title">스터디 멤버</h2>
+            <p class="section-subtitle">함께 성장하는 개발자들</p>
+          </div>
+        </v-col>
+      </v-row>
+      
+      <v-row justify="center" class="mt-8">
+        <v-col cols="12">
+          <v-row>
+            <v-col 
+              cols="12" 
+              sm="6" 
+              md="4" 
+              lg="3" 
+              v-for="(item, index) in profiles" 
+              :key="index"
+              class="profile-col"
+            >
+              <Card :profile="item" />
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+      
+      <!-- 통계 섹션 -->
+      <v-row justify="center" class="mt-12">
+        <v-col cols="12" md="8">
+          <v-card class="stats-card" elevation="4">
+            <v-card-text class="text-center pa-8">
+              <v-row>
+                <v-col cols="12" md="4" v-for="(stat, index) in stats" :key="index">
+                  <div class="stat-item">
+                    <v-icon size="48" color="primary" class="mb-3">{{ stat.icon }}</v-icon>
+                    <h3 class="stat-number">{{ stat.number }}</h3>
+                    <p class="stat-label">{{ stat.label }}</p>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </section>
 </template>
 
@@ -117,7 +143,24 @@ export default {
   },
   data () {
     return {
-      profiles
+      profiles,
+      stats: [
+        {
+          icon: 'mdi-account-group',
+          number: profiles.length,
+          label: '활성 멤버'
+        },
+        {
+          icon: 'mdi-code-braces',
+          number: '5+',
+          label: '개발 분야'
+        },
+        {
+          icon: 'mdi-calendar-check',
+          number: '2년+',
+          label: '스터디 기간'
+        }
+      ]
     }
   },
   components: {
@@ -125,3 +168,88 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.profile-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 100px 0;
+  color: white;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.profile-col {
+  margin-bottom: 2rem;
+}
+
+.stats-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item {
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin: 0.5rem 0;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 960px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+}
+</style>
