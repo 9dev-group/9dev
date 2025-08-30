@@ -64,7 +64,7 @@
 
 ```bash
 # 저장소 클론
-git clone https://github.com/your-username/9dev.git
+git clone git@github.com:9dev-group/9dev.git
 cd 9dev
 
 # 의존성 설치
