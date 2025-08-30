@@ -108,7 +108,7 @@ const additionalInfo = [
   {
     image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop',
     title: '모임 방식',
-    description: '강남역 근처 카페에서 편안하고 자유로운 분위기로 스터디를 진행합니다.',
+    description: '사당역 근처 카페에서 편안하고 자유로운 분위기로 스터디를 진행합니다.',
     color: 'success',
     actionIcon: 'mdi-map-marker-radius',
     actionText: '위치 보기',
