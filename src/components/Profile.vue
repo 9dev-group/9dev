@@ -128,8 +128,8 @@ const profiles = [
   },
   {
     name: "여니",
-    profession: "솔루션 개발자",
-    motto: "딸기좋아❤️",
+    profession: "웹 개발자",
+    motto: "전산팀에서 일하고 있어요",
     image: prodProfileImgPath + "strawberry.jpg"
   },
   {
