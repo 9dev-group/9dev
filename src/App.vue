@@ -97,6 +97,7 @@
       <Transition name="page" appear>
         <div>
           <Front id="front" />
+          <Dashboard id="dashboard" />
           <Introduce id="introduce" />
           <Profile id="profile" />
           <Information id="information" />
@@ -128,6 +129,7 @@ import { useTheme } from 'vuetify'
 import { gsap } from 'gsap'
 
 import Front from './components/Front.vue'
+import Dashboard from './components/Dashboard.vue'
 import Introduce from './components/Introduce.vue'
 import Profile from './components/Profile.vue'
 import Information from './components/Information.vue'
@@ -141,6 +143,7 @@ const isDarkMode = ref(false)
 
 const navigationItems = [
   { id: 'front', title: '홈', icon: 'mdi-home' },
+  { id: 'dashboard', title: '대시보드', icon: 'mdi-view-dashboard' },
   { id: 'introduce', title: '소개', icon: 'mdi-information' },
   { id: 'profile', title: '사람들', icon: 'mdi-account-group' },
   { id: 'information', title: '정보', icon: 'mdi-map-marker' }
