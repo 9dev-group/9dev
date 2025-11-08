@@ -1,25 +1,16 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vuetify from 'vite-plugin-vuetify'
 import { resolve } from 'path'
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    vuetify({
-      autoImport: true
-    })
-  ],
-  define: {
-    'process.env': {}
-  },
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
     }
   },
   server: {
-    port: 8080,
+    port: 3000,
     open: true
   },
   build: {
@@ -30,8 +21,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['vue', 'vuetify'],
-          animations: ['gsap']
+          'vue-vendor': ['vue', 'vue-router', 'pinia']
         }
       }
     }

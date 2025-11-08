@@ -8,27 +8,30 @@
 
 ## ✨ 주요 기능
 
-- **현대적인 반응형 디자인**: 모든 디바이스에서 최적화된 사용자 경험
-- **인터랙티브 애니메이션**: GSAP를 활용한 부드러운 애니메이션과 호버 효과
-- **멤버 프로필**: 스터디 멤버들의 정보와 GitHub 링크
-- **모임 정보**: 장소, 일정, 연락처 정보 제공
-- **소셜 링크**: GitHub, 이메일 등 다양한 연락 방법
-- **다크/라이트 모드**: 사용자 선호에 따른 테마 전환
-- **부드러운 스크롤 네비게이션**: 섹션별 자동 스크롤 기능
+- **현대적인 UI/UX 리뉴얼**: Tailwind CSS 기반의 세련된 디자인
+- **대시보드**: 최신 활동, 통계, 리포지토리 현황을 한눈에 확인
+- **리포지토리 관리**: 카드형 UI로 프로젝트를 직관적으로 탐색
+- **설정 페이지**: 프로필, 테마, 알림 등 개인화 설정
+- **다크/라이트 모드**: localStorage 기반 테마 영속성 지원
+- **반응형 디자인**: 모바일, 태블릿, 데스크톱 완벽 대응
+- **좌측 사이드바 네비게이션**: 직관적인 페이지 이동
+- **검색 및 알림**: 상단 네비게이션바의 편리한 기능
 
 ## 🛠 기술 스택
 
 ### Frontend
-- **Framework**: Vue.js 3.x (Composition API)
-- **UI Framework**: Vuetify 3.x
+- **Framework**: Vue.js 3.x (Composition API with `<script setup>`)
+- **Styling**: Tailwind CSS 3.x
 - **Build Tool**: Vite 5.x
+- **Router**: Vue Router 4.x
 - **State Management**: Pinia
-- **Icons**: Material Design Icons (MDI)
+- **Fonts**: Inter, Poppins, Noto Sans KR (Google Fonts)
 
-### Animation & Styling
-- **Animation Library**: GSAP (GreenSock Animation Platform)
-- **Styling**: CSS3 with modern features (Glassmorphism, Gradients)
-- **Typography**: Noto Sans KR (Google Fonts)
+### Design System
+- **Primary Color**: Indigo (#4F46E5)
+- **Secondary Color**: Emerald (#10B981)
+- **Design Pattern**: Card-based layout with hover effects
+- **Typography**: Inter for UI, Poppins for display
 
 ### Development Tools
 - **Package Manager**: npm
@@ -70,7 +73,7 @@ cd 9dev
 # 의존성 설치
 npm install
 
-# 개발 서버 실행 (localhost:8080)
+# 개발 서버 실행 (localhost:3000)
 npm run dev
 
 # 프로덕션 빌드
@@ -78,59 +81,121 @@ npm run build
 
 # 빌드 결과 미리보기
 npm run preview
+
+# 코드 린트
+npm run lint
+
+# 코드 포맷팅
+npm run format
 ```
+
+## 🎯 페이지 구성
+
+### Dashboard (대시보드)
+- 실시간 통계 카드 (멤버 수, 프로젝트, 커밋, 스터디 시간)
+- 최근 활동 타임라인
+- 빠른 링크 (GitHub, 스터디 가이드, 프로젝트 보드)
+- 최근 리포지토리 카드 그리드
+
+### Repositories (리포지토리)
+- 카드 기반 그리드 레이아웃 (반응형: 모바일 1열, 태블릿 2열, 데스크톱 3열)
+- 필터링 (언어별: Kotlin, Java, Vue)
+- 정렬 (최근 업데이트, 스타 수, 이름 순)
+- 각 카드: 이름, 설명, 스타, 포크, 언어, 태그, 최근 업데이트
+
+### Settings (설정)
+- **프로필 설정**: 사진, 이름, 이메일, 소개, GitHub 사용자명
+- **테마 설정**: 라이트/다크/시스템 모드, 액센트 컬러, 폰트 크기
+- **알림 설정**: 이메일, 푸시, 주간 리포트, 멤버 활동 알림
+- **계정 설정**: 비밀번호 변경, 계정 삭제
 
 ## 🎨 디자인 특징
 
-- **그라디언트 배경**: 현대적인 그라디언트 색상 조합
-- **글래스모피즘**: 반투명 효과를 활용한 모던한 디자인
+- **Tailwind CSS 유틸리티**: 빠르고 일관된 스타일링
 - **카드 기반 레이아웃**: 깔끔하고 직관적인 정보 구조
-- **호버 애니메이션**: 사용자 상호작용을 위한 부드러운 애니메이션
-- **반응형 그리드**: 모바일, 태블릿, 데스크톱 최적화
-- **타이포그래피**: Noto Sans KR 폰트를 활용한 가독성
-- **3D 효과**: 입체감을 위한 그림자와 변형 효과
+- **호버 효과**: 카드에 마우스 오버 시 그림자 + 약간의 확대 (transform)
+- **다크 모드 지원**: 완벽한 다크 테마 구현
+- **반응형 그리드**: Tailwind의 그리드 시스템 활용
+- **타이포그래피**: Inter, Poppins, Noto Sans KR 조합
+- **접근성**: 색상 대비, 키보드 네비게이션 고려
+- **커스텀 스크롤바**: 브랜드 컬러 적용
 
-## 📱 반응형 지원
+## 📱 반응형 브레이크포인트
 
-- **모바일**: 320px 이상
-- **태블릿**: 768px 이상  
-- **데스크톱**: 1024px 이상
-- **대형 화면**: 1440px 이상
+- **모바일 (sm)**: 640px 이상
+- **태블릿 (md)**: 768px 이상
+- **데스크톱 (lg)**: 1024px 이상
+- **대형 화면 (xl)**: 1280px 이상
+- **초대형 (2xl)**: 1536px 이상
 
-## 🎭 애니메이션 기능
+## 🎭 인터랙션 & 애니메이션
 
-- **GSAP 애니메이션**: 부드러운 진입 애니메이션
-- **스크롤 트리거**: 스크롤에 따른 요소 등장 효과
-- **호버 인터랙션**: 마우스 오버 시 부드러운 변형
-- **플로팅 요소**: 배경의 움직이는 기술 아이콘들
-- **스크롤 인디케이터**: 페이지 하단으로 안내하는 애니메이션
+- **페이지 전환**: Vue Router 기반 부드러운 전환 효과
+- **카드 호버**: Shadow + Transform 애니메이션
+- **테마 전환**: 아이콘 회전 애니메이션
+- **드롭다운**: Fade + Slide 효과
+- **사이드바**: 모바일에서 슬라이드 인/아웃
 
 ## 🏗 프로젝트 구조
 
 ```
 9dev/
 ├── src/
-│   ├── components/          # Vue 컴포넌트들
-│   │   ├── App.vue         # 메인 앱 컴포넌트
-│   │   ├── Front.vue       # 홈페이지 히어로 섹션
-│   │   ├── Introduce.vue   # 소개 섹션
-│   │   ├── Profile.vue     # 멤버 프로필 섹션
-│   │   ├── Card.vue        # 프로필 카드 컴포넌트
-│   │   ├── Information.vue # 모임 정보 섹션
-│   │   ├── Location.vue    # 위치 정보 컴포넌트
-│   │   ├── Contact.vue     # 연락처 컴포넌트
-│   │   └── Footer.vue      # 푸터 컴포넌트
-│   ├── assets/             # 정적 자산들
-│   │   ├── images/         # 이미지 파일들
-│   │   └── favicon.png     # 파비콘
-│   ├── css/                # CSS 스타일 파일들
-│   └── main.js             # 앱 진입점
-├── public/                 # 공개 정적 파일들
-├── index.html              # HTML 템플릿
-├── package.json            # 프로젝트 설정 및 의존성
-├── vite.config.js          # Vite 설정
-└── README.md               # 프로젝트 문서
+│   ├── components/
+│   │   ├── common/              # 공통 컴포넌트
+│   │   │   ├── AppCard.vue     # 재사용 가능한 카드 컴포넌트
+│   │   │   ├── AppSidebar.vue  # 좌측 네비게이션 사이드바
+│   │   │   ├── AppNavbar.vue   # 상단 네비게이션 바
+│   │   │   └── ThemeSwitcher.vue # 테마 전환 스위치
+│   │   └── (기존 컴포넌트들)     # 레거시 컴포넌트 유지
+│   ├── pages/                   # 페이지 컴포넌트
+│   │   ├── Dashboard.vue        # 대시보드 페이지
+│   │   ├── Repositories.vue     # 리포지토리 목록 페이지
+│   │   └── Settings.vue         # 설정 페이지
+│   ├── layouts/
+│   │   └── DefaultLayout.vue    # 기본 레이아웃 (Sidebar + Navbar)
+│   ├── router/
+│   │   └── index.js             # Vue Router 설정
+│   ├── composables/
+│   │   └── useTheme.js          # 테마 관리 Composable
+│   ├── styles/
+│   │   ├── tailwind.css         # Tailwind CSS 설정 및 커스텀 스타일
+│   │   └── global.css           # 전역 CSS (레거시)
+│   ├── assets/                  # 정적 자산
+│   ├── App.vue                  # 루트 컴포넌트
+│   └── main.js                  # 애플리케이션 진입점
+├── public/                      # 정적 파일
+├── index.html                   # HTML 진입점
+├── tailwind.config.js           # Tailwind CSS 설정
+├── postcss.config.js            # PostCSS 설정
+├── vite.config.js               # Vite 번들러 설정
+├── .eslintrc.cjs                # ESLint 설정
+├── .prettierrc                  # Prettier 설정
+├── package.json                 # 프로젝트 의존성
+└── README.md                    # 문서
 ```
+
+## 🎨 Tailwind CSS 커스터마이징
+
+### 색상 팔레트
+```js
+primary: {
+  DEFAULT: '#4F46E5', // Indigo
+  50-950: // 색상 스케일
+}
+secondary: {
+  DEFAULT: '#10B981', // Emerald
+  50-950: // 색상 스케일
+}
+```
+
+### 커스텀 유틸리티 클래스
+- `.card` - 기본 카드 스타일
+- `.card-hover` - 호버 효과가 있는 카드
+- `.sidebar-item` - 사이드바 아이템
+- `.btn-primary` / `.btn-secondary` - 버튼 스타일
+- `.input` - 입력 필드 스타일
+- `.badge-primary` / `.badge-secondary` - 배지 스타일
 
 ## 🤝 기여하기
 
